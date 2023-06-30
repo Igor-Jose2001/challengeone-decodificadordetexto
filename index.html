@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Decodificador - Challenge One</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body class="fundo_do_site">
+		<header class="cabecalhoPrincipal">
+			<h1><img class="logo" src="Frame 6.png"></h1>
+		</header>
+
+		<main>
+			<div class="codificador-decodificador">
+				<div class="codificador">
+					<input type="text" class="input" required placeholder="Digite sua Mensagem aqui...">
+
+					<p class="requisitos">* Apenas letras minúsculas e sem acento</p>
+
+					<div>
+						<button class="button-criptografar">Criptografar</button>
+						<button class="button-descriptografar">Descriptografar</button>
+					</div>
+
+				</div>
+
+				<div class="decodificador">
+					<div id="decodificador">
+					</div>
+
+					<div id="text">
+						<img class="imagem_sem_mensagem" src="nenhuma_mensagem.png">
+					</div>
+
+					<!--<button class="copiar">Copiar</button>-->
+
+					<script>
+						function ocultar() {
+  							document.getElementById("text").style.display = "none";
+						}
+
+						function criptografar () {
+
+							var input = document.querySelector("input");
+							
+							var arrayDeLetras = String(input.value).split ('');
+
+							for (var i = 0; i < arrayDeLetras.length; i++) {
+								if (arrayDeLetras[i] == "e") {arrayDeLetras[i] = "enter"}
+								if (arrayDeLetras[i] == "i") {arrayDeLetras[i] = "imes"}
+								if (arrayDeLetras[i] == "a") {arrayDeLetras[i] = "ai"}
+								if (arrayDeLetras[i] == "o") {arrayDeLetras[i] = "ober"}
+								if (arrayDeLetras[i] == "u") {arrayDeLetras[i] = "ufat"}
+							}
+
+
+							var text = "";
+							for (var i = 0; i < arrayDeLetras.length; i++) {
+								text = text + arrayDeLetras[i];
+							}
+
+							document.getElementById("decodificador").innerText = text;
+							document.getElementById("decodificador").innerText = text; 
+
+						}
+
+						function descriptografar () {
+
+							var input = document.querySelector("input");
+
+							var arrayDeLetras = String(input.value).split ('');
+
+							for (var i = 0; i < arrayDeLetras.length; i++) {
+
+								if (arrayDeLetras[i] =="e") {
+									if (arrayDeLetras[i+1] == "n") {
+										if (arrayDeLetras[i+2] == "t") {
+											if (arrayDeLetras[i+3] == "e") {
+												if (arrayDeLetras[i+4] == "r") {
+													arrayDeLetras[i+1] = "";
+													arrayDeLetras[i+2] = "";
+													arrayDeLetras[i+3] = "";
+													arrayDeLetras[i+4] = "";
+												}
+											}
+										}
+									}
+								}
+
+								if (arrayDeLetras[i] == "i") {
+									if (arrayDeLetras[i+1] == "m") {
+										if (arrayDeLetras[i+2] == "e") {
+											if (arrayDeLetras[i+3] == "s") {
+												arrayDeLetras[i+1] = "";
+												arrayDeLetras[i+2] = "";
+												arrayDeLetras[i+3] = "";
+											}
+										}
+									}
+								}
+
+								if (arrayDeLetras[i] == "a") {
+									if (arrayDeLetras[i+1] == "i") {
+										arrayDeLetras[i+1] = "";
+									}
+								}
+
+								if (arrayDeLetras[i] == "o") {
+									if (arrayDeLetras[i+1] == "b") {
+										if (arrayDeLetras[i+2] == "e") {
+											if (arrayDeLetras[i+3] == "r") {
+												arrayDeLetras[i+1] = "";
+												arrayDeLetras[i+2] = "";
+												arrayDeLetras[i+3] = "";
+											}
+										}
+									}
+								}
+
+								if (arrayDeLetras[i] == "u") {
+									if (arrayDeLetras[i+1] == "f") {
+										if (arrayDeLetras[i+2] == "a") {
+											if (arrayDeLetras[i+3] == "t") {
+												arrayDeLetras[i+1] = "";
+												arrayDeLetras[i+2] = "";
+												arrayDeLetras[i+3] = "";
+											}
+										}
+									}
+								}								
+							}
+
+							var text = "";
+							for (var i = 0; i < arrayDeLetras.length; i++) {
+								text = text + arrayDeLetras[i];
+							}
+
+							document.getElementById("decodificador").innerText = text;
+							document.getElementById("decodificador").innerText = text;
+
+						}
+
+						var buttoncripto = document.querySelector(".button-criptografar");
+						var buttondescripto = document.querySelector(".button-descriptografar");
+
+						buttoncripto.addEventListener('click', ocultar);
+						buttoncripto.addEventListener('click', criptografar);
+						
+						buttondescripto.addEventListener('click', ocultar);
+						buttondescripto.addEventListener('click', descriptografar);
+					
+					</script>
+
+			</div>
+		</main>
+
+		<footer class="rodape">
+			<p>Desenvolvido por Igor José dos Santos Camêlo</p>
+			<p>Challenge One - Decodifcador</p>
+			<p>Curso Alura - Turma 5</p>
+		</footer>
+	</body>
+
+</html>

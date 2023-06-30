@@ -1,0 +1,123 @@
+/*Logo da Alura */
+
+.logo {
+	margin: 20px;
+}
+
+.fundo_do_site {
+	background-color: #d0eced;
+}
+
+/*FlexBox Codificador-Decodificador*/
+
+.codificador-decodificador {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 450px;
+}
+
+/*Codificador*/
+
+.codificador {
+	text-align: center;
+	height: 100%;
+	width: 50%;
+}
+
+.input {
+	width: 70%;
+	height: 85%;
+  font-size: 19px;
+  color: #213880;
+  font-color:#213880;
+  background-color: #d0eced;
+  border: lightgray;
+  border-radius: 15px;
+}
+
+.requisitos {
+	margin-top: 18px;
+	font-size: 10px;
+	color: gray;
+	font-style: italic;
+	font-family: Arial;
+}
+
+.button-criptografar {
+	margin-top: 8px;
+	background: #213880;
+	color: white;
+	font-weight: bold;
+	border-style: outset;
+	border-color: #213880;
+	border-radius: 25px;
+	height: 50px;
+	width: 40%;
+	font: bold15px arial;
+	font-size: 20px;
+	text-shadow: none;
+}
+
+.button-descriptografar {
+	margin-top: 8px;
+	background: white;
+	color: #213880;
+	font-weight: bold;
+	border-style: outset;
+	border-color: #213880;
+	border-radius: 25px;
+	height: 50px;
+	width: 40%;
+	font-size: 20px;
+	font: bold15px arial;
+	text-shadow: none;
+}
+
+/*Decodificador*/
+
+.decodificador{
+	width: 400px;
+  height:450px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+#decodificador {
+  font-size: 19px;
+  color: #213880;
+  font-family: Arial;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+#text {
+  	width: 400px;
+  	height: 450px;
+  	background-color: white;
+  	border-radius: 30px;
+ }
+
+ .imagem_sem_mensagem {
+ 	 max-height: 440px;
+ 	 height: auto;
+ 	 margin: auto;
+   display: block;
+ }
+
+ /*.copiar {
+ 	 text-align: center;
+ } */
+
+ /*Rodapé*/
+
+ .rodape {
+ 	color: white;
+ 	font-family: arial;
+ 	font-size: 10px;
+ 	text-align: center;
+ 	padding: 20px 0;
+	margin-top: 50px;
+	background-image: linear-gradient(#d0eced, #0d5b5e)
+ }
